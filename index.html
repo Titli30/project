@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+  <!-- Landing Section -->
+  <section class="landing">
+    <h1><span class="highlight">Create</span> Your Professional Resume</h1>
+    <p>Build your resume in minutes with modern templates and real-time preview.</p>
+    <div class="action-buttons">
+      <button onclick="startBuilding()">Start Building</button>
+      <a href="#" onclick="switchTheme()">Theme Switcher</a>
+      <a href="#" onclick="switchTemplate()">Template Switcher</a>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="form-section hidden" id="formSection">
+    <form id="resumeForm">
+      <input type="file" id="profileImage" accept="image/*" />
+      <input type="text" id="fullName" placeholder="Your Name" required />
+      <input type="text" id="title" placeholder="Job Title" required />
+      <textarea id="profile" placeholder="Short Profile Summary" rows="4" required></textarea>
+
+      <div class="with-icon">
+        <span>📧</span>
+        <input type="text" id="email" placeholder="Email" required />
+      </div>
+      <div class="with-icon">
+        <span>📞</span>
+        <input type="text" id="phone" placeholder="Phone" required />
+      </div>
+      <div class="with-icon">
+        <span>📍</span>
+        <input type="text" id="address" placeholder="Address" required />
+      </div>
+
+      <h4>Work Experience (Optional for Freshers)</h4>
+      <div id="experienceSection">
+        <div class="exp-entry">
+          <input type="text" placeholder="Job Title" class="jobTitle" />
+          <input type="text" placeholder="Company Name" class="company" />
+          <input type="text" placeholder="Duration" class="duration" />
+          <textarea placeholder="Job Responsibilities" class="jobDetails" rows="3"></textarea>
+        </div>
+      </div>
+      <button type="button" onclick="addExperience()">Add Experience</button>
+
+      <h4>Education</h4>
+      <div id="educationSection">
+        <div class="edu-entry">
+          <input type="text" placeholder="Degree" class="degree" required />
+          <input type="text" placeholder="Institution" class="institution" required />
+          <input type="text" placeholder="Duration" class="eduDuration" required />
+        </div>
+      </div>
+      <button type="button" onclick="addEducation()">Add Education</button>
+
+      <h4>Projects (Optional)</h4>
+      <div id="projectSection">
+        <div class="project-entry">
+          <input type="text" placeholder="Project Title" class="projectTitle" />
+          <textarea placeholder="Project Description" class="projectDesc" rows="3"></textarea>
+          <input type="text" placeholder="Project Link" class="projectLink" />
+        </div>
+      </div>
+      <button type="button" onclick="addProject()">Add Project</button>
+
+      <h4>Skills</h4>
+      <textarea id="skills" placeholder="E.g. HTML, CSS, JS" rows="2" required></textarea>
+
+      <h4>Languages</h4>
+      <textarea id="languages" placeholder="E.g. English, Hindi" rows="2" required></textarea>
+
+      <div class="form-actions">
+        <button type="submit">Generate Resume</button>
+        <button type="button" id="downloadBtn">Download PDF</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Resume Preview -->
+  <div class="resume-output" id="resumeOutput"></div>
+
+  <footer>
+    © 2025 Your Name | Built with ❤️ using HTML, CSS & JS
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
