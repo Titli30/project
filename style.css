@@ -1,0 +1,105 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f8;
+  color: #333;
+}
+
+.landing {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #c2e9fb, #a1c4fd);
+}
+
+.landing h1 {
+  font-size: 2.5em;
+}
+
+.highlight {
+  color: #5e60ce;
+}
+
+.action-buttons {
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  padding: 12px 25px;
+  background: #5e60ce;
+  color: #fff;
+  border: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.action-buttons a {
+  margin: 0 10px;
+  text-decoration: underline;
+  color: #333;
+  cursor: pointer;
+}
+
+.form-section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+h4 {
+  margin-top: 30px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button[type="submit"], #downloadBtn {
+  background-color: #5e60ce;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 15px 10px 0 0;
+  border: none;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background: #222;
+  color: #fff;
+}
+
+.resume-output {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.with-icon {
+  display: flex;
+  align-items: center;
+}
+
+.with-icon span {
+  margin-right: 10px;
+}
